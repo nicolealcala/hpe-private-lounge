@@ -1,0 +1,223 @@
+#hero-section {
+  background-image: url("./public/hero-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100dvh;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  color: #4b5563;
+
+  --bg-mid-dark: #242424;
+  --bg-grey: #f7f8fa;
+  --color-primary: #01a982;
+
+  /* Texts */
+  --color-black: #0b0c0c;
+
+  --color-extralight-grey: #fafafa;
+  --color-light-grey: #f8f8f8;
+  --color-muted-light: #b0b0b0;
+  --color-muted-dark: #555555;
+  --color-primary: #01a982;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 1000px;
+}
+nav {
+  background-color: var(--color-white);
+}
+
+body {
+  background-color: var(--bg-grey);
+}
+
+.main-heading {
+  font-size: clamp(2rem, 6vw + 0.5rem, 3rem);
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+}
+
+.heading {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 2.5rem);
+  line-height: 1.2;
+  font-weight: bold;
+  color: var(--bg-mid-dark);
+}
+.subheading {
+  font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.5rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.registration-btn {
+  display: block;
+  width: fit-content;
+  background-color: var(--color-white);
+  color: var(--bg-mid-dark) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.registration-btn svg {
+  stroke: var(--bg-mid-dark) !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.registration-btn.cta-box-btn {
+  box-shadow: 0px 2px 16px rgba(1, 169, 130, 1);
+}
+
+.registration-btn:hover {
+  transform: translateY(-4px);
+}
+
+.registration-btn:hover svg {
+  transform: rotate(-45deg);
+}
+
+.banner-card-heading {
+  font-size: 24px;
+  color: var(--bg-mid-dark);
+  font-weight: 600;
+}
+
+.banner-card-body {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.border-light {
+  border: 1px solid var(--color-light-grey);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-large {
+  padding-inline: 24px;
+  padding-block: 16px;
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.card {
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 600px;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.card-exclusive::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card-exclusive:hover::before {
+  opacity: 1;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding-inline: 12px;
+  padding-block: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: rgba(1, 169, 130, 0.1);
+  height: fit-content;
+}
+
+.icon {
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(1, 169, 130, 0.3);
+}
+
+.bg-dark {
+  background-color: var(--color-black);
+}
+.bg-mid-dark {
+  background-color: var(--bg-mid-dark);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-dark {
+  color: #242424 !important;
+}
+
+.text-muted-light {
+  color: var(--color-muted-light) !important;
+}
+
+.text-muted-dark {
+  color: var(--color-muted-dark);
+}
+
+#increase-chance-winning-section strong {
+  color: #242424 !important;
+}
+
+#cta-box > div {
+  background-image: url("./public/mesh-bg.png");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.footer-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc;
+}
+
+.footer-list li {
+  padding-left: 0.25rem;
+  color: var(--color-muted-light) !important;
+}
+
+.footer-list li::marker {
+  font-size: 0.75em;
+  color: #25e2ae !important;
+}
