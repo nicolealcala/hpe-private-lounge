@@ -18,25 +18,28 @@
 
     <link rel="preload" as="image" href="./public/hero-bg.jpeg">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
     <style type="text/tailwindcss">
         @theme {
         --color-primary: #01a982;
+        --color-primary-bright: #25e2ae;
+        --color-mid-slate: #4b5563;
     }
 
 </style>
 </head>
 
 <body>
-    <nav class="h-20 sticky top-0 left-0 z-90 border-b border-gray-200">
-        <div class="flex  justify-between items-center w-full max-w-7xl h-full mx-auto px-6 md:px-6 lg:px-0">
+    <nav class="h-20 sticky top-0 left-0 z-90 border-b border-gray-100 isolation-isolate">
+        <div
+            class="relative flex justify-between items-center w-full max-w-7xl h-full mx-auto px-6 md:px-6 lg:px-8 xl:px-0">
             <a href="#" class="text-white"><img src="./public/logo.png" alt="Logo"
-                    class="w-auto h-16 object-center object-cover" /></a>
+                    class="w-auto h-14 md:h-16 object-center object-cover" /></a>
 
-            <div class="flex gap-x-8">
+            <div class="hidden md:flex gap-x-8">
                 <a href="https://www.hpe.com/emea_europe/en/home.html" target="_blank"
                     class="hover:text-primary! transition-colors duration-200 ease-in-out">Home</a>
                 <a href="https://www.hpe.com/emea_europe/en/solutions.html"
@@ -45,6 +48,32 @@
                     class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Products</a>
                 <a href="https://www.hpe.com/emea_europe/en/services.html"
                     class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Services</a>
+                <a href="https://www.hpe.com/emea_europe/en/support.html"
+                    class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Support</a>
+            </div>
+
+            <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox"
+                onchange="handleNavToggle(event)">
+            <label class="icon-menu flex md:hidden" for="check-icon">
+                <div class="bar bar--1"></div>
+                <div class="bar bar--2"></div>
+                <div class="bar bar--3"></div>
+            </label>
+
+            <div id="menu-box"
+                class="absolute top-full right-0 z-[-1] flex flex-col gap-y-3 w-full p-4 pt-5 bg-white rounded-b-sm overflow-hidden md:hidden">
+                <a href="https://www.hpe.com/emea_europe/en/home.html" target="_blank"
+                    class="hover:text-primary! transition-colors duration-200 ease-in-out">Home</a>
+                <hr class="border-t border-gray-200">
+                <a href="https://www.hpe.com/emea_europe/en/solutions.html"
+                    class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Solutions</a>
+                <hr class="border-t border-gray-200">
+                <a href="https://www.hpe.com/emea_europe/en/products.html"
+                    class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Products</a>
+                <hr class="border-t border-gray-200">
+                <a href="https://www.hpe.com/emea_europe/en/services.html"
+                    class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Services</a>
+                <hr class="border-t border-gray-200">
                 <a href="https://www.hpe.com/emea_europe/en/support.html"
                     class="hover:text-primary! transition-colors duration-200 ease-in-out" target="_blank">Support</a>
             </div>
@@ -115,7 +144,7 @@
                 </div>
 
                 <!-- Banner Item 2 -->
-                <div data-aos="fade-up" data-aos-delay="200"
+                <div data-aos="fade-up" data-aos-delay="100"
                     class="card bg-white card-exclusive flex flex-col gap-y-6 p-10 w-full max-w-2xl">
                     <div class="icon size-16 flex items-center justify-center text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -169,7 +198,7 @@
                     </div>
 
                     <!-- Exclusive Item 2 -->
-                    <div data-aos="fade-up" data-aos-delay="200"
+                    <div data-aos="fade-up" data-aos-delay="100"
                         class="card card-exclusive bg-mid-dark p-10 flex flex-col flex-1 gap-y-6 ">
                         <h3 class="banner-card-heading text-white!">ASLO Bonus Club
                         </h3>
@@ -186,7 +215,7 @@
                     </div>
 
                     <!-- Exclusive Item 3 -->
-                    <div data-aos="fade-up" data-aos-delay="400"
+                    <div data-aos="fade-up" data-aos-delay="200"
                         class="card card-exclusive bg-mid-dark p-10 flex flex-col flex-1 gap-y-6">
                         <h3 class="banner-card-heading text-white!">Zusätzliche Punkte
                         </h3>
@@ -215,7 +244,8 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <!-- Incentive Item 1 -->
-                <div data-aos="zoom-in" class="card border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
+                <div data-aos="zoom-in"
+                    class="card border border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
                     <img src="./public/smart-choice.png" alt="HPE Smart Choice">
 
                     <!-- Title & Label -->
@@ -275,7 +305,8 @@
                 </div>
 
                 <!-- Incentive Item 2 -->
-                <div data-aos="zoom-in" class="card border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
+                <div data-aos="zoom-in"
+                    class="card border border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
                     <img src="./public/msa-storage.png" alt="HPE MSA Storage">
 
                     <!-- Title & Label -->
@@ -337,7 +368,8 @@
                 </div>
 
                 <!-- Incentive Item 3 -->
-                <div data-aos="zoom-in" class="card border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
+                <div data-aos="zoom-in"
+                    class="card border border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
                     <img src="./public/access-points.png" alt="HPE Networking Instant On Access Points">
 
                     <!-- Title & Label -->
@@ -396,7 +428,8 @@
                 </div>
 
                 <!-- Incentive Item 4 -->
-                <div data-aos="zoom-in" class="card border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
+                <div data-aos="zoom-in"
+                    class="card border border-light bg-white p-8 flex flex-col gap-y-4 md:gap-y-6 mx-auto">
                     <img src="./public/switches.png" alt="HPE Networking Instant On Switches">
 
                     <!-- Title & Label -->
@@ -459,15 +492,15 @@
 
     <!-- Increse Chance of winiing section -->
     <section class="pt-5 pb-30" id="increase-chance-winning-section">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-center items-stretch px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 justify-center items-stretch px-8 lg:px-8">
             <!-- Image column -->
-            <div data-aos="fade-right" class="w-full lg:flex-1 flex justify-center">
+            <div data-aos="fade-up" class="w-full lg:flex-1 flex justify-center">
                 <img src="./public/grand-prize.png" alt="Grand Prize"
                     class="w-full max-w-[600px] rounded-2xl object-cover mx-auto" />
             </div>
 
             <!-- Text column -->
-            <div data-aos="fade-left" class="w-full lg:flex-1 flex items-center">
+            <div data-aos="fade-up" class="w-full lg:flex-1 flex items-center">
                 <div class="flex flex-col gap-y-6 md: gap-y-8 w-full max-w-xl mx-auto">
                     <h2 class="heading">Steigern Sie Ihre Gewinnchancen</h2>
 
@@ -498,6 +531,7 @@
     </section>
 
 
+    <!-- CTA Box -->
     <section data-aos="fade-up" class="px-4 lg:px-8 pt-12 pb-30" id="cta-box">
         <div class="max-w-7xl mx-auto py-12 md:py-30 text-center px-8 md:px-10">
             <!-- CTA Container -->
@@ -533,7 +567,7 @@
             <div class="flex flex-col lg:flex-row gap-12 justify-between">
                 <div class="flex flex-col gap-6">
                     <h2 class="text-xl font-bold text-white!">Kontakt</h2>
-                    <p class="text-white/80!">Für weitere Informationen oder bei Fragen wenden Sie sich bitte an
+                    <p class="text-white/90!">Für weitere Informationen oder bei Fragen wenden Sie sich bitte an
                         unser
                         Vertriebsteam.</p>
                 </div>
@@ -546,7 +580,7 @@
                             <rect x="2" y="4" width="20" height="16" rx="2" />
                         </svg>
                         <a href="mailto:hpe-solutions-de@also.com"
-                            class="text-white! hover:text-[#25e2ae]! transition-colors duration-200 ease-in-out">hpe-solutions-de@also.com</a>
+                            class="text-white! hover:text-primary-bright! transition-colors duration-200 ease-in-out">hpe-solutions-de@also.com</a>
                     </div>
 
                     <div class="flex gap-4 items-center">
@@ -556,7 +590,7 @@
                                 d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
                         </svg>
                         <a href="tel:+492921995445"
-                            class="text-white! hover:text-[#25e2ae]! transition-colors duration-200 ease-in-out">
+                            class="text-white! hover:text-primary-bright! transition-colors duration-200 ease-in-out">
                             +49 2921 99-54 45
                         </a>
                     </div>
@@ -566,7 +600,7 @@
             <div class="bg-neutral-700 h-px w-full"></div>
 
             <!-- Lower details -->
-            <ul class="footer-list text-sm text-muted-light">
+            <ul class="footer-list text-sm">
                 <li>Bereits registrierte Kunden müssen sich nicht erneut registrieren und nehmen automatisch
                     am Incentive teil.</li>
                 <li>Gültig solange der Vorrat reicht.</li>
@@ -587,11 +621,38 @@
         </div>
     </footer>
 
+    <button id="back-to-top"
+        class="fixed bottom-5 right-5 md:bottom-10 md:right-10 size-12 z-90 bg-teal-500 rounded-full shadow-md flex items-center justify-center cursor-pointer"
+        onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="white" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+    </button>
+
 
     <script>
         AOS.init({
             easing: "ease-out-quart",
+            once: true,
         });
+        const backToTopButton = document.getElementById("back-to-top");
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+
+        function handleNavToggle(event) {
+            const menu = document.getElementById("menu-box");
+
+            menu.classList.toggle("is-open", event.target.checked);
+        }
+
+        window.addEventListener("scroll", () => {
+            backToTopButton.classList.toggle("show", window.scrollY > 100)
+        })
     </script>
 </body>
 
