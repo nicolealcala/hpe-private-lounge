@@ -5,7 +5,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   height: 100dvh;
 }
 
@@ -21,6 +20,7 @@
   --color-muted-light: #b0b0b0;
   --color-muted-dark: #555555;
   --color-primary: #01a982;
+  --color-primary-bright: #25e2ae;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -29,11 +29,11 @@
   --radius-full: 1000px;
 
   font-family: "Inter", sans-serif;
-  color: var(--color-mid-slate);
 }
 
 body {
   background-color: var(--color-grey);
+  color: var(--color-mid-slate);
 }
 
 .main-heading {
@@ -92,7 +92,7 @@ body {
 }
 
 .border-light {
-  border: 1px solid var(--color-light-grey);
+  border-color: var(--color-light-grey);
 }
 
 .btn {
@@ -217,7 +217,7 @@ body {
 
 .footer-list li::marker {
   font-size: 0.75em;
-  color: #25e2ae !important;
+  color: var(--color-primary-bright) !important;
 }
 
 #back-to-top {
