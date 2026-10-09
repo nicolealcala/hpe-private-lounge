@@ -60,7 +60,3 @@ For a local development server, you can also use an extension such as **Live Ser
 The page uses the Tailwind CSS browser build through the jsDelivr CDN, so an internet connection is required for Tailwind CSS to load.
 
 The visual assets included in the project were provided or prepared specifically for the landing page design test.
-
-## Author
-
-Nicole Alcala
